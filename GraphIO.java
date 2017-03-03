@@ -13,16 +13,18 @@ public class GraphIO {
 	
 	static public void readFile(Graph g, String filename) throws IOException {
 		
-		br = new BufferedReader(new FileReader(filename));
-		
-		//while(br.)
 		
 		numberOfNodes = input.get(0)[0];
 		
-		File file = new File(filename);
-		Scanner scanner = new Scanner(file);
-		while(scanner.hasNext()) {
-			scanner.next().toString();
+		//File file = new File(filename);
+		Scanner scanner = new Scanner(new FileReader(filename));
+		
+		if(scanner.hasNextLine()) {
+			input.add(new int[]{scanner.nextInt()});
+		}
+		
+		while(scanner.hasNextLine()) {
+			input.add(new int[]{scanner.nextInt(), scanner.nextInt(), scanner.nextInt()});
 			break;
 		}
 		
